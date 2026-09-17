@@ -70,3 +70,58 @@ IoT et systèmes embarqués
 ---
 
 
+
+---
+
+# Projets
+
+## JobDom
+
+Plateforme web permettant de connecter recruteurs et chercheurs d'emploi au Cameroun.
+
+Technologies :
+
+- React
+- TypeScript
+- Node.js
+- MongoDB
+
+
+## Application E-commerce
+
+Application de commerce électronique permettant la gestion des produits, utilisateurs et commandes.
+
+
+
+# Workflow Git
+
+Ce projet utilise une organisation Git basée sur les branches.
+
+
+## Description des branches
+
+### main
+
+Branche stable contenant les versions prêtes pour la publication.
+
+### develop
+
+Branche d'intégration permettant de tester les fonctionnalités avant publication.
+
+### JuniorPortfolio
+
+Branche personnelle de développement utilisée pour créer les nouvelles fonctionnalités.
+
+---
+
+# Règles de collaboration
+
+Même dans un développement individuel, le projet suit des pratiques professionnelles :
+
+## Création des fonctionnalités
+
+Chaque nouvelle fonctionnalité doit être développée sur une branche dédiée.
+
+Exemple :
+
+
