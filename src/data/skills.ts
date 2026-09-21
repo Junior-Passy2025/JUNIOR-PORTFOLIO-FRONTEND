@@ -15,6 +15,7 @@ export const skills: Skill[] = [
     ]
   },
 
+
   {
     category: "Développement Full Stack Web & Mobile",
     skills: [
@@ -33,8 +34,9 @@ export const skills: Skill[] = [
     ]
   },
 
+
   {
-    category: "IoT & Systèmes embarqués",
+    category: "Orientation systèmes embarqués & IoT",
     skills: [
       "Arduino",
       "Microcontrôleurs",
@@ -43,6 +45,7 @@ export const skills: Skill[] = [
       "Prototypage électronique"
     ]
   },
+
 
   {
     category: "Outils & Conception",

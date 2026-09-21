@@ -33,9 +33,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-cyan-400 text-lg mb-4">
-            Bonjour, je suis
-          </p>
+          <p className="text-cyan-400 text-lg mb-4">Bonjour, je suis</p>
 
           <motion.h1
             className="
@@ -113,11 +111,10 @@ const Hero = () => {
               max-w-xl
             "
           >
-            Électrotechnicien de formation avec plusieurs années
-            d'expérience dans la maintenance des systèmes électriques,
-            j'ai développé par la suite des compétences en programmation
-            web et mobile. Mon objectif est aujourd'hui d'évoluer vers
-            les systèmes embarqués et l'IoT.
+            Électrotechnicien de formation avec plusieurs années d'expérience
+            dans la maintenance des systèmes électriques, j'ai progressivement
+            développé des compétences en développement web et mobile. Mon
+            parcours m'amène aujourd'hui vers les systèmes embarqués et l'IoT.
           </p>
 
           <div
@@ -212,7 +209,7 @@ const Hero = () => {
               shadow-lg
             "
           >
-            Électrotechnique 
+            Électrotechnique
           </motion.div>
 
           {/* Badge gauche */}
@@ -291,7 +288,7 @@ const Hero = () => {
               bg-slate-800/90
               border
               border-cyan-400
-              px-4
+              px-3
               py-2
               rounded-xl
               text-cyan-400
@@ -301,7 +298,7 @@ const Hero = () => {
               shadow-lg
             "
           >
-            Embedded Systems / IoT
+            Objectif : Systèmes embarqués & IoT
           </motion.div>
 
           {/* Photo flottante */}
