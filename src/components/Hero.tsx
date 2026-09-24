@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import imageProfil from "../assets/images/profile/imageProfile.jpg";
+import cv from "../assets/documents/CV_Junior_Passy_Suffo.pdf";
 
 const firstName = "Junior Passy";
 const lastName = "SUFFO NZOKOU";
@@ -142,18 +143,20 @@ const Hero = () => {
             </a>
 
             <a
-              href="/cv.pdf"
+              href={cv}
+              download="CV_Junior_Passy_Suffo.pdf"
               className="
-                px-6
-                py-3
-                border
-                border-cyan-500
-                rounded-lg
-                font-semibold
-                hover:bg-cyan-500
-                hover:text-slate-950
-                transition
-              "
+               border
+               border-cyan-400
+               px-8
+               py-3
+               rounded-lg
+               font-semibold
+               text-white
+               hover:bg-cyan-400
+               hover:text-slate-900
+               transition
+             "
             >
               Télécharger mon CV
             </a>

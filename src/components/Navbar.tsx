@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { contact } from "../data/contact";
 
 const Navbar = () => {
   return (
@@ -33,29 +34,34 @@ const Navbar = () => {
         </div>
 
         {/* Réseaux */}
-       <div className="flex items-center gap-4">
+ {/* Réseaux */}
+<div className="flex items-center gap-4">
 
-  <a 
-    href="#" 
+  <a
+    href={contact.github}
+    target="_blank"
+    rel="noopener noreferrer"
     className="text-gray-300 hover:text-cyan-400 transition"
   >
-    <FaGithub size={20}/>
+    <FaGithub size={20} />
   </a>
 
 
-  <a 
-    href="#" 
+  <a
+    href={contact.linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
     className="text-gray-300 hover:text-cyan-400 transition"
   >
-    <FaLinkedin size={20}/>
+    <FaLinkedin size={20} />
   </a>
 
 
-  <a 
-    href="#" 
+  <a
+    href={`mailto:${contact.email}`}
     className="text-gray-300 hover:text-cyan-400 transition"
   >
-    <FaEnvelope size={20}/>
+    <FaEnvelope size={20} />
   </a>
 
 </div>
