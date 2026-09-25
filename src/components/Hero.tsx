@@ -9,12 +9,12 @@ const Hero = () => {
   return (
     <section
       className="
-        min-h-[calc(100vh-80px)]
+        min-h-[calc(100vh-80px)]     //min-h-screen
         bg-slate-950
         text-white
         flex
         items-center
-        overflow-hidden
+        overflow-visible            //overflow-hidden
       "
     >
       <div
