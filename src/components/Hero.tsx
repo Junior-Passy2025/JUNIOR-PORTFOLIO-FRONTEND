@@ -9,13 +9,14 @@ const Hero = () => {
   return (
     <section
       className="
-        min-h-[calc(100vh-80px)]     //min-h-screen
-        bg-slate-950
-        text-white
-        flex
-        items-center
-        overflow-visible            //overflow-hidden
-      "
+          relative
+          min-h-screen
+          bg-slate-950
+          text-white
+          flex
+          items-center
+          overflow-hidden
+          "
     >
       <div
         className="
@@ -228,7 +229,7 @@ const Hero = () => {
               left-0
               top-1/2
               -translate-y-1/2
-              -translate-x-25
+              -translate-x-24
               bg-slate-800/90
               border
               border-cyan-400

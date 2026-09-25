@@ -7,21 +7,29 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 function App() {
+return (
+<div
+  className="
+    min-h-screen
+    bg-slate-950
+    text-white
+    overflow-x-hidden
+  "
+>
 
-  return (
-    <>
-      <Navbar />
+  <Navbar />
 
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />   
-        <Projects />   
-        <Contact />   
-      </main>
-    </>
-  );
+  <main>
+    <Hero />
+    <About />
+    <Skills />
+    <Experience />
+    <Projects />
+    <Contact />
+  </main>
+
+</div>
+);
 
 }
 
