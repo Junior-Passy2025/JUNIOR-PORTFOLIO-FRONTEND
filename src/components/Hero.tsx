@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       className="
-        min-h-screen
+        min-h-[calc(100vh-80px)]
         bg-slate-950
         text-white
         flex

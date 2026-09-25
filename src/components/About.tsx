@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 const About = () => {
   return (
     <section
@@ -25,7 +27,12 @@ const About = () => {
       >
 
         {/* Parcours */}
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
 
           <h2
             className="
@@ -64,12 +71,16 @@ const About = () => {
             et l'Internet des Objets (IoT).
           </p>
 
-        </div>
+        </motion.div>
 
 
 
         {/* Axes professionnels */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
           className="grid gap-6"
         >
 
@@ -111,7 +122,7 @@ const About = () => {
           </div>
 
 
-        </div>
+        </motion.div>
 
       </div>
 
