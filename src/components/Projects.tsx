@@ -12,7 +12,7 @@ const Projects = () => {
       className="
         bg-slate-900
         text-white
-        py-20
+        pb-20
       "
     >
 

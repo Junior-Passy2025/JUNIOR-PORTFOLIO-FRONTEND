@@ -42,7 +42,7 @@ const Contact = () => {
       className="
         bg-slate-900
         text-white
-        py-20
+        pb-20
       "
     >
       <div

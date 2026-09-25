@@ -16,6 +16,8 @@ const Hero = () => {
           flex
           items-center
           overflow-hidden
+          pt-20
+          md:pt-0
           "
     >
       <div
@@ -39,13 +41,13 @@ const Hero = () => {
 
           <motion.h1
             className="
-              text-5xl
-              md:text-7xl
-              font-bold
-              mb-6
-            "
+    text-5xl
+    md:text-7xl
+    font-bold
+    mb-6
+  "
           >
-            <motion.span>
+            <motion.span className="text-cyan-400">
               {firstName.split("").map((letter, index) => (
                 <motion.span
                   key={index}
@@ -66,20 +68,27 @@ const Hero = () => {
             <br />
 
             <motion.span className="text-cyan-400">
-              {lastName.split("").map((letter, index) => (
-                <motion.span
-                  key={index}
-                  animate={{ opacity: [0, 1, 1, 0] }}
-                  transition={{
-                    duration: 8,
-                    times: [0, 0.25, 0.9, 1],
-                    delay: (firstName.length + index) * 0.12,
-                    repeat: Infinity,
-                    repeatDelay: 5,
-                  }}
-                >
-                  {letter}
-                </motion.span>
+              {lastName.split(" ").map((word, wordIndex) => (
+                <span key={wordIndex}>
+                  {word.split("").map((letter, index) => (
+                    <motion.span
+                      key={index}
+                      animate={{ opacity: [0, 1, 1, 0] }}
+                      transition={{
+                        duration: 8,
+                        times: [0, 0.25, 0.9, 1],
+                        delay:
+                          (firstName.length + index + wordIndex * 6) * 0.12,
+                        repeat: Infinity,
+                        repeatDelay: 5,
+                      }}
+                    >
+                      {letter}
+                    </motion.span>
+                  ))}
+
+                  {wordIndex === 0 && <br />}
+                </span>
               ))}
             </motion.span>
           </motion.h1>
