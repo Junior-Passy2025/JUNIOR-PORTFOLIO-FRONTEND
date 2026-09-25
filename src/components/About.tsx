@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 const About = () => {
+  console.log("ABOUT CHARGE");
   return (
     <section
       id="about"
