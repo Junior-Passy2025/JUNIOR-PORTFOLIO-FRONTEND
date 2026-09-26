@@ -40,10 +40,14 @@ const Contact = () => {
     <section
       id="contact"
       className="
-        bg-slate-900
-        text-white
-        pb-20
-      "
+  bg-white
+  dark:bg-slate-900
+  text-slate-900
+  dark:text-white
+  pb-20
+  transition-colors
+  duration-500
+"
     >
       <div
         className="
@@ -87,7 +91,8 @@ const Contact = () => {
           <p
             className="
               mt-4
-              text-gray-400
+              text-slate-600
+dark:text-gray-400
               text-lg
               max-w-2xl
               mx-auto
@@ -123,11 +128,14 @@ const Contact = () => {
               once: true,
             }}
             className="
-              bg-slate-950
-              border
-              border-cyan-500/30
-              rounded-xl
-              p-8
+              bg-slate-100
+dark:bg-slate-950
+border
+border-cyan-500/30
+rounded-xl
+p-8
+transition-colors
+duration-500
             "
           >
             <h3
@@ -151,7 +159,9 @@ const Contact = () => {
               >
                 <Mail className="text-cyan-400" />
 
-                <span>{contact.email}</span>
+                <span className="text-slate-700 dark:text-gray-300">
+                  {contact.email}
+                </span>
               </div>
 
               <div
@@ -163,7 +173,9 @@ const Contact = () => {
               >
                 <Phone className="text-cyan-400" />
 
-                <span>{contact.phone}</span>
+                <span className="text-slate-700 dark:text-gray-300">
+                  {contact.phone}
+                </span>
               </div>
 
               <div
@@ -175,94 +187,104 @@ const Contact = () => {
               >
                 <MapPin className="text-cyan-400" />
 
-                <span>{contact.location}</span>
+                <span className="text-slate-700 dark:text-gray-300">
+                  {contact.location}
+                </span>
               </div>
-
             </div>
 
             <div className="mt-8">
-  <h4 className="text-lg font-semibold mb-5">
-    Me suivre sur :
-  </h4>
+              <h4 className="text-lg font-semibold mb-5">Me suivre sur :</h4>
 
-  <div className="flex gap-5">
-
-    <a
-      href={contact.github}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="
+              <div className="flex gap-5">
+                <a
+                  href={contact.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
         w-12
         h-12
         rounded-full
-        bg-slate-900
+        bg-white
+dark:bg-slate-900
         flex
         items-center
         justify-center
         hover:bg-cyan-400
         hover:text-slate-900
         transition
+        border
+border-slate-200
+dark:border-slate-700
       "
-    >
-      <FaGithub size={22} />
-    </a>
+                >
+                  <FaGithub size={22} />
+                </a>
 
-
-    <a
-      href={contact.linkedin}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="
+                <a
+                  href={contact.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
         w-12
         h-12
         rounded-full
-        bg-slate-900
+        bg-white
+dark:bg-slate-900
         flex
         items-center
         justify-center
         hover:bg-cyan-400
         hover:text-slate-900
         transition
+        border
+border-slate-200
+dark:border-slate-700
       "
-    >
-      <FaLinkedin size={22} />
-    </a>
+                >
+                  <FaLinkedin size={22} />
+                </a>
 
-
-    <a
-      href={`mailto:${contact.email}`}
-      className="
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="
         w-12
         h-12
         rounded-full
-        bg-slate-900
+        bg-white
+dark:bg-slate-900
         flex
         items-center
         justify-center
         hover:bg-cyan-400
         hover:text-slate-900
         transition
+        border
+border-slate-200
+dark:border-slate-700
       "
-    >
-      <Mail size={22} />
-    </a>
-
-  </div>
-</div>
+                >
+                  <Mail size={22} />
+                </a>
+              </div>
+            </div>
 
             <div
               className="
                 mt-8
                 border-t
-                border-slate-800
+                border-slate-300
+dark:border-slate-800
+
                 pt-6
               "
             >
               <p
                 className="
-                  text-gray-400
-                  text-sm
-                "
+    text-slate-600
+    dark:text-gray-400
+    text-sm
+  "
               >
                 {contact.availability}
               </p>
@@ -289,12 +311,15 @@ const Contact = () => {
               once: true,
             }}
             className="
-              bg-slate-950
-              border
-              border-cyan-500/30
-              rounded-xl
-              p-8
-              space-y-5
+              bg-slate-100
+dark:bg-slate-950
+border
+border-cyan-500/30
+rounded-xl
+p-8
+space-y-5
+transition-colors
+duration-500
             "
           >
             <input
@@ -303,14 +328,21 @@ const Contact = () => {
               required
               className="
                 w-full
-                bg-slate-900
+                bg-white
+dark:bg-slate-900
+
+border-slate-300
+dark:border-slate-700
+
+text-slate-900
+dark:text-white
                 border
-                border-slate-700
                 rounded-lg
                 p-3
-                text-white
                 outline-none
                 focus:border-cyan-400
+                transition-colors
+duration-300
               "
             />
 
@@ -321,14 +353,21 @@ const Contact = () => {
               required
               className="
                 w-full
-                bg-slate-900
+                bg-white
+dark:bg-slate-900
+
+border-slate-300
+dark:border-slate-700
+
+text-slate-900
+dark:text-white
                 border
-                border-slate-700
                 rounded-lg
                 p-3
-                text-white
                 outline-none
                 focus:border-cyan-400
+                transition-colors
+duration-300
               "
             />
 
@@ -339,14 +378,21 @@ const Contact = () => {
               required
               className="
                 w-full
-                bg-slate-900
+                bg-white
+dark:bg-slate-900
+
+border-slate-300
+dark:border-slate-700
+
+text-slate-900
+dark:text-white
                 border
-                border-slate-700
                 rounded-lg
                 p-3
-                text-white
                 outline-none
                 focus:border-cyan-400
+                transition-colors
+duration-300
               "
             />
 

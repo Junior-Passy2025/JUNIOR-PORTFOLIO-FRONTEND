@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
 import { experiences } from "../data/experiences";
 
-
 const Experience = () => {
   return (
     <section
       id="experience"
       className="
         min-h-screen
-        bg-slate-900
-        text-white
+        bg-white
+        dark:bg-slate-900
+        text-slate-900
+        dark:text-white
         py-20
+        transition-colors
+        duration-500
       "
     >
-
       <div
         className="
           max-w-6xl
@@ -21,7 +23,6 @@ const Experience = () => {
           px-6
         "
       >
-
         {/* Titre */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -30,7 +31,6 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-
           <h2
             className="
               text-4xl
@@ -44,11 +44,11 @@ const Experience = () => {
             </span>
           </h2>
 
-
           <p
             className="
               mt-4
-              text-gray-400
+              text-slate-600
+              dark:text-gray-400
               text-lg
               max-w-3xl
               mx-auto
@@ -58,9 +58,7 @@ const Experience = () => {
             du diagnostic technique et de l'évolution vers les technologies
             numériques.
           </p>
-
         </motion.div>
-
 
 
         {/* Timeline */}
@@ -94,13 +92,16 @@ const Experience = () => {
               }}
 
               className="
-                bg-slate-950
+                bg-slate-100
+                dark:bg-slate-950
                 border
-                border-cyan-500/30
+                border-slate-300
+                dark:border-cyan-500/30
                 rounded-xl
                 p-6
                 hover:border-cyan-400
-                transition
+                transition-all
+                duration-500
               "
             >
 
@@ -130,7 +131,8 @@ const Experience = () => {
 
                   <p
                     className="
-                      text-gray-300
+                      text-slate-700
+                      dark:text-gray-300
                       mt-1
                     "
                   >
@@ -143,7 +145,8 @@ const Experience = () => {
                 <span
                   className="
                     text-sm
-                    text-gray-400
+                    text-slate-500
+                    dark:text-gray-400
                     mt-2
                     md:mt-0
                   "
@@ -156,7 +159,8 @@ const Experience = () => {
 
               <p
                 className="
-                  text-gray-300
+                  text-slate-700
+                  dark:text-gray-300
                   leading-relaxed
                   mb-5
                 "
@@ -183,11 +187,14 @@ const Experience = () => {
                       px-3
                       py-2
                       rounded-lg
-                      bg-slate-900
+                      bg-white
+                      dark:bg-slate-900
                       border
-                      border-slate-700
+                      border-slate-300
+                      dark:border-slate-700
                       text-sm
-                      text-gray-300
+                      text-slate-700
+                      dark:text-gray-300
                       hover:text-cyan-400
                       hover:border-cyan-400
                       transition
@@ -209,10 +216,8 @@ const Experience = () => {
 
 
       </div>
-
     </section>
   );
 };
-
 
 export default Experience;

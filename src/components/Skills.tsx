@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Zap, Code2, Cpu, Settings } from "lucide-react";
 import { skills } from "../data/skills";
 
-
 const icons = {
   zap: Zap,
   code: Code2,
@@ -10,19 +9,21 @@ const icons = {
   settings: Settings,
 };
 
-
 const Skills = () => {
   return (
     <section
       id="skills"
       className="
         min-h-screen
-        bg-slate-950
-        text-white
+        bg-white
+        dark:bg-slate-950
+        text-slate-900
+        dark:text-white
         py-20
+        transition-colors
+        duration-500
       "
     >
-
       <div
         className="
           max-w-6xl
@@ -30,7 +31,6 @@ const Skills = () => {
           px-6
         "
       >
-
         {/* Titre */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,7 +39,6 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-
           <h2
             className="
               text-4xl
@@ -53,11 +52,11 @@ const Skills = () => {
             </span>
           </h2>
 
-
           <p
             className="
               mt-4
-              text-gray-400
+              text-slate-600
+              dark:text-gray-400
               text-lg
               max-w-3xl
               mx-auto
@@ -67,10 +66,7 @@ const Skills = () => {
             le développement logiciel et une orientation vers
             les systèmes embarqués et l'IoT.
           </p>
-
         </motion.div>
-
-
 
         {/* Cartes compétences */}
         <div
@@ -80,56 +76,53 @@ const Skills = () => {
             gap-8
           "
         >
-
           {skills.map((skill, index) => {
-
             const Icon = skill.icon
               ? icons[skill.icon as keyof typeof icons]
               : null;
 
-
             return (
-
               <motion.div
                 key={skill.category}
 
                 initial={{
                   opacity: 0,
-                  y: 40
+                  y: 40,
                 }}
 
                 whileInView={{
                   opacity: 1,
-                  y: 0
+                  y: 0,
                 }}
 
                 whileHover={{
-                  y: -5
+                  y: -5,
                 }}
 
                 transition={{
                   duration: 0.6,
-                  delay: index * 0.15
+                  delay: index * 0.15,
                 }}
 
                 viewport={{
-                  once: true
+                  once: true,
                 }}
 
                 className="
-                  bg-slate-900
+                  bg-slate-100
+                  dark:bg-slate-900
                   border
-                  border-cyan-500/30
+                  border-slate-300
+                  dark:border-slate-700
                   rounded-xl
                   p-6
                   hover:border-cyan-400
+                  dark:hover:border-cyan-400
                   hover:shadow-lg
                   hover:shadow-cyan-500/10
                   transition
                 "
               >
-
-
                 {/* Titre avec icône */}
                 <div
                   className="
@@ -139,14 +132,12 @@ const Skills = () => {
                     mb-5
                   "
                 >
-
                   {Icon && (
                     <Icon
                       size={28}
                       className="text-cyan-400"
                     />
                   )}
-
 
                   <h3
                     className="
@@ -157,10 +148,7 @@ const Skills = () => {
                   >
                     {skill.category}
                   </h3>
-
                 </div>
-
-
 
                 {/* Liste des compétences */}
                 <div
@@ -170,58 +158,49 @@ const Skills = () => {
                     gap-3
                   "
                 >
-
                   {skill.skills.map((item) => (
-
                     <motion.span
                       key={item}
 
                       whileHover={{
                         scale: 1.05,
-                        y: -3
+                        y: -3,
                       }}
 
                       transition={{
-                        duration: 0.2
+                        duration: 0.2,
                       }}
 
                       className="
                         px-3
                         py-2
                         rounded-lg
-                        bg-slate-950
+                        bg-white
+                        dark:bg-slate-950
                         border
-                        border-slate-700
-                        text-gray-300
+                        border-slate-300
+                        dark:border-slate-700
+                        text-slate-700
+                        dark:text-gray-300
                         text-sm
                         cursor-default
                         hover:border-cyan-400
-                        hover:text-cyan-400
+                        hover:text-cyan-500
+                        dark:hover:text-cyan-400
                         transition
                       "
                     >
                       {item}
                     </motion.span>
-
                   ))}
-
                 </div>
-
-
               </motion.div>
-
             );
-
           })}
-
         </div>
-
-
       </div>
-
     </section>
   );
 };
-
 
 export default Skills;

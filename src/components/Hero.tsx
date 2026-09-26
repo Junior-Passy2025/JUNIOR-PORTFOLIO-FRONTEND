@@ -9,16 +9,21 @@ const Hero = () => {
   return (
     <section
       className="
-          relative
-          min-h-screen
-          bg-slate-950
-          text-white
-          flex
-          items-center
-          overflow-hidden
-          pt-20
-          md:pt-0
-          "
+         relative
+         min-h-screen
+         bg-white
+         dark:bg-slate-950
+         text-slate-900
+         dark:text-white
+         flex
+         items-center
+         overflow-hidden
+         pb-20
+         mt-5
+         md:pt-0
+         transition-colors
+         duration-500
+        "
     >
       <div
         className="
@@ -37,7 +42,16 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-cyan-400 text-lg mb-4">Bonjour, je suis</p>
+          <p
+            className="
+    text-lg
+    text-slate-600
+    dark:text-gray-400
+    mb-4
+  "
+          >
+            Bonjour, je suis
+          </p>
 
           <motion.h1
             className="
@@ -106,21 +120,23 @@ const Hero = () => {
 
           <p
             className="
-              text-lg
-              text-gray-400
-              mb-6
-            "
+    text-lg
+    text-slate-600
+    dark:text-gray-400
+    mb-6
+  "
           >
             En évolution vers les systèmes embarqués et l'IoT
           </p>
 
           <p
             className="
-              text-lg
-              text-gray-300
-              leading-relaxed
-              max-w-xl
-            "
+    text-lg
+    text-slate-700
+    dark:text-gray-300
+    leading-relaxed
+    max-w-xl
+  "
           >
             Électrotechnicien de formation avec plusieurs années d'expérience
             dans la maintenance des systèmes électriques, j'ai progressivement
@@ -156,17 +172,18 @@ const Hero = () => {
               href={cv}
               download="CV_Junior_Passy_Suffo.pdf"
               className="
-               border
-               border-cyan-400
-               px-8
-               py-3
-               rounded-lg
-               font-semibold
-               text-white
-               hover:bg-cyan-400
-               hover:text-slate-900
-               transition
-             "
+ border
+ border-cyan-400
+ px-8
+ py-3
+ rounded-lg
+ font-semibold
+ text-slate-900
+ dark:text-white
+ hover:bg-cyan-400
+ hover:text-slate-900
+ transition
+"
             >
               Télécharger mon CV
             </a>
@@ -206,10 +223,13 @@ const Hero = () => {
             }}
             className="
               absolute
-              -top-6
+              -top-10
               left-1/2
               -translate-x-1/2
-              bg-slate-800/90
+             bg-white/90
+dark:bg-slate-800/90
+transition-colors
+duration-500
               border
               border-cyan-400
               px-4
@@ -227,7 +247,7 @@ const Hero = () => {
 
           {/* Badge gauche */}
           <motion.div
-            animate={{ x: [0, -2, 0] }}
+            animate={{ x: [0, -8, 0] }}
             transition={{
               duration: 3.5,
               repeat: Infinity,
@@ -238,11 +258,14 @@ const Hero = () => {
               left-0
               top-1/2
               -translate-y-1/2
-              -translate-x-24
-              bg-slate-800/90
+              -translate-x-21
+              bg-white/90
+dark:bg-slate-800/90
+transition-colors
+duration-500
               border
               border-cyan-400
-              px-4
+              px-3
               py-2
               rounded-xl
               text-cyan-400
@@ -257,7 +280,7 @@ const Hero = () => {
 
           {/* Badge droite */}
           <motion.div
-            animate={{ x: [0, 3, 0] }}
+            animate={{ x: [0, 8, 0] }}
             transition={{
               duration: 3.5,
               repeat: Infinity,
@@ -265,11 +288,14 @@ const Hero = () => {
             }}
             className="
               absolute
-              right-0
+              right-4
               top-1/2
               -translate-y-1/2
               translate-x-1
-              bg-slate-800/90
+              bg-white/90
+dark:bg-slate-800/90
+transition-colors
+duration-500
               border
               border-cyan-400
               px-4
@@ -298,7 +324,10 @@ const Hero = () => {
               -bottom-6
               left-1/2
               -translate-x-1/2
-              bg-slate-800/90
+              bg-white/90
+dark:bg-slate-800/90
+transition-colors
+duration-500
               border
               border-cyan-400
               px-3
